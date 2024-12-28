@@ -1,0 +1,42 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    color: white;
+}
+  
+.center{
+    text-align: center;
+}
+  
+body{
+      overflow-x:hidden;
+  background-color: #0D0e0c;
+}
+
+.brown{
+    background-color: brown;
+}
+
+.blue{
+    background-color: blue;
+}
+
+img{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.row h1{
+   width: 100%;
+
+}
+
+.padding{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.padding2{
+    padding-top: 40px;
+    padding-bottom: 40px;
+}

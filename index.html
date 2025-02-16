@@ -9,8 +9,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
     <!-- Custom CSS -->
-  <link rel="stylesheet" type="text/css" href="style.css">
-
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
     <!--Navbar -->
@@ -31,142 +30,59 @@
             <li class="nav-item">
               <a class="nav-link" href="Skateboarding.html"> Skateboarding </a>
             </li>
-            <!--
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Dropdown
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Something else here</a>
-              </div>
-            </li>
-        
-            <li class="nav-item">
-              <a class="nav-link disabled" href="#">Disabled</a>
-            </li>
           </ul>
-          <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-          </form>
-        -->
         </div>
       </nav>
 
     <!--Header-->
     <header>
-
         <!-- Background image -->
-    <div class="p-5 text-center bg-image" style="
-    background-image: url('skratshit.png');
-    height: 400px; 
-    background-size: cover;
-    background-position: relative;">
-    <div>
-      <div class="d-flex justify-content-center align-items-center h-100">
-        <div class="text-white">
-          
-        </div>
-      </div>
-    </div>
-  </div>
-
+        <div class="p-5 text-center bg-image" style="background-image: url('skratshit.png'); height: 400px; background-size: cover; background-position: relative;"></div>
     </header>
 
-
     <!--Main-->
-    <main class="container">
-
-      <!--Activites-->
-      <section id="electronics">
-        <h2 class="section-title">Electronics</h2>
-          <div class="row">
-            <div class="col-md-6">
-              <div class="card">
-                <h3>Projects</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id vel eos beatae possimus sint nihil magnam itaque cum omnis, officiis maxime. Cumque vitae minus veritatis doloremque tempora porro odit voluptatum.</p>
-              </div>
+    <main id="app" class="container">
+        <section v-for="section in sections" :id="section.id" class="section">
+            <h2 class="section-title">{{ section.title }}</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card">
+                        <h3>{{ section.title }}</h3>
+                        <p>{{ section.description }}</p>
+                    </div>
+                </div>
+                <div class="col-md-6" v-if="section.img">
+                    <div class="card">
+                        <img :src="section.img" :alt="section.title">
+                    </div>
+                </div>
             </div>
-            <div class="col-md-6">
-              <div class="card">
-                <img src ="electronics.jpg">
-              </div>
-            </div>
-          </div>
-      </section>
-
-      <section id="skateboarding">
-        <h2 class="section-title">Skateboarding</h2>
-          <div class="row">
-            <div class="col-md-6">
-              <div class="card">
-                <img src="skating.jpg">
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="card">
-                <h3>Tricks</h3>
-                <p>Discover the best skateboarding gear and equipment.</p>
-              </div>
-            </div>
-          </div>
-      </section>
-
-      <section id="music">
-        <h2 class="section-title">Music</h2>
-          <div class="row">
-            <div class="col-md-6">
-              <div class="card">
-                <h3>Genres</h3>
-                <p>Dive into various music genres and discover new favorites.</p>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="card">
-                <h3>Creation</h3>
-                <p>Learn how to create your own music with beginner-friendly tools.</p>
-              </div>
-            </div>
-          </div>
-      </section>
-
-      <section id="art">
-        <h2 class="section-title">Art</h2>
-          <div class="row">
-            <div class="col-md-6">
-              <div class="card">
-                <h3>Gallery</h3>
-                <p>Browse through inspiring artwork and creative designs.</p>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="card">
-                <h3>Tutorials</h3>
-                <p>Improve your art skills with step-by-step tutorials.</p>
-              </div>
-            </div>
-          </div>
-      </section>
-
-      <!--Members-->
-      
-
-
-
+        </section>
     </main>
     
     <footer>
       <p>&copy; 2025 Skrats. All rights reserved.</p>
-
     </footer>
 
     <!-- JS-->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script>
+        const app = Vue.createApp({
+            data() {
+                return {
+                    sections: [
+                        { id: "electronics", title: "Electronics", description: "Explore electronic projects.", img: "electronics.jpg" },
+                        { id: "skateboarding", title: "Skateboarding", description: "Discover the best skateboarding gear and tricks.", img: "skating.jpg" },
+                        { id: "music", title: "Music", description: "Learn how to create your own music.", img: "" },
+                        { id: "art", title: "Art", description: "Improve your art skills with tutorials.", img: "" }
+                    ]
+                };
+            }
+        });
+        app.mount("#app");
+    </script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
 </body>
 </html>

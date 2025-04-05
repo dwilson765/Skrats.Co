@@ -165,3 +165,14 @@ footer {
   text-transform: uppercase;
   margin: 1rem 0 2rem;
 }
+
+#transition{
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100"><g fill="%23000"><path d="M1000 100C500 100 500 64 0 64V0h1000v100Z" opacity=".5"></path><path d="M1000 100C500 100 500 34 0 34V0h1000v100Z" opacity=".5"></path><path d="M1000 100C500 100 500 4 0 4V0h1000v100Z"></path></g></svg>')
+
+}
+
+.breakout {
+  margin:1em -100%; /* old browsers fallback */
+  margin:1em calc(50% - 50vw);
+  background-color:rgba(255,0,255,0.5)
+}

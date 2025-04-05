@@ -3,7 +3,7 @@ const app = Vue.createApp({
         return {
             sections: [
                 { id: "electronics", title: "Electronics", description: "Explore electronic projects.", img: "electronics.jpg" },
-                { id: "skateboarding", title: "Skateboarding", description: "Discover the best skateboarding gear and tricks.", img: "skating.jpg" },
+                { id: "skateboarding transition", title: "Skateboarding", description: "Discover the best skateboarding gear and tricks.", img: "skating.jpg" },
                 { id: "music", title: "Music", description: "Learn how to create your own music.", img: "skratBanner.png" },
                 { id: "art", title: "Art", description: "Improve your art skills with tutorials.", img: "SLUDGE_LIFE_2.jpeg" }
             ]

@@ -39,14 +39,13 @@
 
     <!--Header-->
     <header>
-        <!-- Background image -->
-        <div class="p-5 text-center bg-image" style="background-image: url('SkratLeaderboard.png'); height: 400px; background-size: cover; background-position: relative;"></div>
-        <div class="tagline headercard" style="margin-top: 0;">Art Amoung The Grime</div>
+        <img src="SkratLeaderboard.png" alt="Leaderboard" style="height: 100%; width: 100%;">
+        <div class="tagline headercard container" style="margin-top: 0;">Art Amoung The Grime</div>
     </header>
 
     <!--Main--> 
-    <main id="app" class="container">
-        <section v-for="section in sections" :id="section.id" class="section">
+    <main id="app" >
+        <section v-for="section in sections" :id="section.id" class="section container">
             <h2 class="section-title">{{ section.title }}</h2>
             <div class="row equal-height">
                 <div class="col-md-6">
@@ -61,17 +60,53 @@
                 </div>
             </div>
         </section>
-        <section style="background-image: url(geopatterns.png);">
+
+        <!-- Image Break Up-->
+        <section class="svg-divider-flip">
+          <section id="cat">
           <img src="Sludge_Life_Double_bg.jpeg" alt="Double Double/Ghost Art">
    
         </section>
+        
 
-        <div class="svg-divider">...</div>
-        <section>
-          <h2> come </h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit sit maxime laborum aliquam voluptate pariatur magni harum quae cupiditate, sint at excepturi architecto eaque! Pariatur asperiores ipsum dolor quis veritatis!</p>
+        <!--Column Image/Text with a button probably-->
+        <section class="svg-divider">
+          <div class="row">
+            <div class="col-md-6 centerText">
+              <h2 style="font-size: 2rem;"> Violence describes us,<br>
+               Art defines us</h2>
+              <p style="font-size: 1.25rem;">
+                We are born from scraps and pain,<br>
+                Existing between cracks — in noise, in color, in chaos.<br>
+                A married force, *feeding on ruin.*<br>
+                Born to bleed and wither,<br>
+                Yet our existence scars reality.<br>
+                From us, art is created and rules are disregarded.<br>
+                Our art born from resistance,<br>
+                Our beauty birthed from ruin.<br>
+                *Spitting color where the world rots.*<br>
+                *We are scratch marks on clean walls,*<br>
+                *bleeding art through broken fingernails.*<br>
+                Carving freedom from concrete and broken shackles,<br>
+                our freedom coated in defiance.<br>
+                A cacophony of broken voices, singing.<br>
+                Utterly damned and forsaken,<br>
+                We exist out of spite.<br>
+                For it is the damned to ignite the flame,<br>
+                Burning our walls and fueling others,<br>
+                To create mischief, rebellion, revolution.<br>
+                Our scars, our brushstrokes.<br>
+                Art among the grime.<br>
+                We are Skrats.<br>
+                Rot loud.<br></p>
+
+            </div>
+            <div class="col-md-6">
+              <img id="coolart" src="long_image.jpg" alt="long">
+            </div>
+          </div>
         </section>
-        <div class="svg-divider flip">...</div>
+        
 
 
     </main>
@@ -86,11 +121,11 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
 </body>
 </html>
 
 <!--
-Add svg dividers to the website
 Add texture overlays
 image overlays
 

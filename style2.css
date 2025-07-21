@@ -204,16 +204,10 @@ footer {
 }
 
 
-#cat{
-  background-image: 
-  url(geopatterns.png);
-  padding:5%;
-  background-size: cover;
-  position: relative;
-}
 
-#coolart{
-  position: relative;
-  padding: 5%;
-  border-radius: 100px !important;
+.caro-img{
+  width: 75%; 
+  height: auto;
+  border: 10px, solid, black; 
+  border-radius: 10%;
 }

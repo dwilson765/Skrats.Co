@@ -203,10 +203,26 @@ footer {
   margin: 0% !important;
 }
 
+.svg-divider-flip img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 
-#cat{
+
+.overlay{
+  position: absolute;
+  height: auto; 
+  width: auto;
+  margin: auto;
+  z-index: -1;
+  opacity: 0.4;
+}
+
+
+#monster{
   background-image: 
-  url(geopatterns.png);
+  url(images/theEyes.jpg);
   padding:5%;
   background-size: cover;
   position: relative;
@@ -216,4 +232,20 @@ footer {
   position: relative;
   padding: 5%;
   border-radius: 100px !important;
+}
+
+/* Us */
+.us {
+  width: 50%;  
+  height: auto; 
+  display: inline-block; 
+  border: 10px, solid, black;
+  border-radius: 20%;
+
+}
+
+.caro-img{
+ 
+  border: 10px, solid, black; 
+  border-radius: 10%;
 }

@@ -17,6 +17,17 @@ const app = Vue.createApp({
                 "images/IMG_8379.jpg",
                 "images/IMG_8388.jpg",
                 "images/standing.jpg",
+                "images/jon1.jpg",
+                "images/jon2.jpg",
+                "images/midskate.jpg",
+                "images/mmfood.jpg",
+                "images/shoes.jpg",
+                "images/skratboard.jpg",
+                "images/board.jpg",
+                "images/camera.JPG",
+                "images/flip.jpg",
+                "images/goodday.jpg",
+                "images/heart.jpg",
                 
                 
                 // Add more image paths as needed

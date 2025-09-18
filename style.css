@@ -310,3 +310,9 @@ footer {
   font-size: 18px;
 }
 
+.list-group-item {
+  background-color: #222 !important; /* light gray */
+  color: white !important;               /* dark text */
+  border: none;                         /* optional: remove border */
+  margin-bottom: 2px;
+}

@@ -4,8 +4,8 @@ const app = Vue.createApp({
           sections2: [
                 { id: "Frankye", title: "Frankye", description: "Deck: 8.38” Welcome<br> Wheels: Spitfire Radial Fulls<br> Bearings: Bone Reds<br> Trucks: Thunder trucks", img: "images/GOPR1337.JPG" },
                 { id: "Arden", title: "Arden", description: "Deck: 8.75” Crooked<br> Wheels: Spitfire Lockins<br> Bearings: Bone Reds<br> Trucks: 159 Hollow Indie", img: "images/arden_skate.jpg" },
-                { id: "Jon", title: "Jon", description: "Yap.", img: "images/G0061400.JPG" },
-                { id: "David", title: "David", description: "Board: 8.125” Toy Machine<br> Wheels: Spitefire Forumla Fours<br> Bearings: Bone Reds<br> Trucks: Thunder Light Hollows", img: "images/G0071409.JPG" }
+                { id: "Jon", title: "Jon", description: "Deck: Chocolate JS Pro<br> Wheels: Spitefire OG Classics<br> Bearings: Bronson Raw<br> Trucks: 5.6 Venture", img: "images/G0061400.JPG" },
+                { id: "David", title: "David", description: "Deck: 8.125” Toy Machine<br> Wheels: Spitefire Forumla Fours<br> Bearings: Bone Reds<br> Trucks: Thunder Light Hollows", img: "images/G0071409.JPG" }
 
             ],
 

@@ -28,7 +28,14 @@ const app = Vue.createApp({
                 "images/flip.jpg",
                 "images/goodday.jpg",
                 "images/heart.jpg",
-                
+                "images/arden1.png",
+                "images/arden2.png",
+                "images/arden3.png",
+                "images/arden4.png",
+                "images/arden5.png",
+                "images/david1.png",
+                "images/david2.png",
+                "images/frankye1.png",
                 
                 // Add more image paths as needed
             ]};

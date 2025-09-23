@@ -3,9 +3,9 @@ const app = Vue.createApp({
         return {
             sections: [
                 { id: "skateboarding transition", title: "Skateboarding", description: "Skating is where most of this stemmed from. Take a look at what we've been up to!", img: "skating.jpg", link: "Skateboarding.html" },
-                { id: "music", title: "Music", description: "Take a listen", img: "skratBanner.png" },
-                { id: "art", title: "Art", description: "Take a look", img: "SLUDGE_LIFE_2.jpeg" },
-                { id: "electronics", title: "Electronics", description: "SOme more STEM-focused projects", img: "electronics.jpg" }
+                { id: "music", title: "Music", description: "Music being one of largest passions and inspirations should be no surpise. Take a listen", img: "skratBanner.png" },
+                { id: "art", title: "Art", description: "Self-expression through art is necessary for humanity to survive. Take a look", img: "SLUDGE_LIFE_2.jpeg" },
+                { id: "electronics", title: "Electronics", description: "Being a nerd has never been better. SOme more STEM-focused projects", img: "electronics.jpg" }
 
             ],
             projects: [

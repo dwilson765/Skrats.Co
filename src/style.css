@@ -1,0 +1,85 @@
+:root {
+  /* Ported from the original style.css palette */
+  --bg: #0b0c10;          /* --bg-dark */
+  --fg: #f4f4f4;           /* --text-light */
+  --accent: #d8b56c;       /* --drip-yellow */
+  --accent2: #b5651d;      /* rust/burnt-orange — original had no second accent,
+                               this complements drip-yellow for the Garden section */
+  --mid: #111111;          /* original .card background-color */
+  --border: #7a7a7a;       /* --grunge-grey */
+  --accent-light: #e0d7cb;
+  --font-display: 'VT323', monospace;
+  --font-body: 'VT323', monospace;
+  --section-pad: clamp(2rem, 6vw, 5rem);
+  --card-radius: 8px;      /* original .card border-radius */
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-body);
+  font-size: clamp(0.9rem, 1.4vw, 1.1rem);
+  overflow-x: hidden;
+  cursor: crosshair;
+  position: relative;
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg, transparent, transparent 2px,
+    rgba(0, 0, 0, 0.18) 2px, rgba(0, 0, 0, 0.18) 4px
+  );
+  pointer-events: none;
+  z-index: 9999;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  margin: 0 0 0.8rem 0;
+  color: var(--fg);
+}
+h1 { font-size: clamp(2rem, 6vw, 4rem); letter-spacing: 3px; margin-bottom: 1.5rem; }
+p { line-height: 1.75; color: rgba(232, 232, 224, 0.85); margin: 0 0 1rem 0; }
+a { color: var(--accent); }
+img { max-width: 100%; }
+
+.hr-glow {
+  border: none;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
+  margin: 0;
+  opacity: 0.5;
+}
+
+@keyframes glitch {
+  0%   { text-shadow: 2px 0 var(--accent2), -2px 0 var(--accent); }
+  20%  { text-shadow: -2px 0 var(--accent2), 2px 0 var(--accent); }
+  40%  { text-shadow: 2px 2px var(--accent2), -2px -2px var(--accent); clip-path: inset(10% 0 80% 0); }
+  60%  { text-shadow: -2px 0 var(--accent2), 2px 0 var(--accent); clip-path: inset(60% 0 20% 0); }
+  80%  { text-shadow: 2px 0 var(--accent2), -2px 0 var(--accent); clip-path: inset(0); }
+  100% { text-shadow: none; clip-path: inset(0); }
+}
+.glitch-title:hover { animation: glitch 0.4s steps(2) forwards; }
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.fade-in.visible { opacity: 1; transform: translateY(0); }
+
+#app { position: relative; z-index: 1; }
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 clamp(1rem, 4vw, 2.5rem);
+}

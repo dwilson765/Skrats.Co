@@ -4,7 +4,7 @@ import {
   bandMembers,
   musicListPlaceholders,
   spotifyEmbedUrl,
-  spotifyAlbumUrl,
+  spotifyAlbumUrl
 } from '@/data'
 
 const listSections = ['Main Genres', 'Recent Song', 'Phasing Out', 'Favorites']
@@ -17,10 +17,10 @@ const listSections = ['Main Genres', 'Recent Song', 'Phasing Out', 'Favorites']
     <div class="container intro">
       <h1>Our Sound</h1>
       <h2 class="lede">
-        It's impossible to pin down a single, cohesive sound when so many musicians are
-        involved ... AND THATS THE POINT! There is no single sound, only the sounds that's
-        created by those who've decided that that sound should exist. Any and all sounds will
-        be made and displayed here, a Skrat doesn't limit themselves creatively, why should you?
+        It's impossible to pin down a single, cohesive sound when so many musicians are involved ...
+        AND THATS THE POINT! There is no single sound, only the sounds that's created by those
+        who've decided that that sound should exist. Any and all sounds will be made and displayed
+        here, a Skrat doesn't limit themselves creatively, why should you?
       </h2>
     </div>
 
@@ -81,7 +81,9 @@ const listSections = ['Main Genres', 'Recent Song', 'Phasing Out', 'Favorites']
           loading="lazy"
         />
         <p class="centered">
-          <a :href="spotifyAlbumUrl" target="_blank" rel="noopener" class="spotify-link">Open in Spotify</a>
+          <a :href="spotifyAlbumUrl" target="_blank" rel="noopener" class="spotify-link"
+            >Open in Spotify</a
+          >
         </p>
       </div>
     </section>
@@ -100,7 +102,9 @@ const listSections = ['Main Genres', 'Recent Song', 'Phasing Out', 'Favorites']
 </template>
 
 <style scoped>
-.music { padding-bottom: var(--section-pad); }
+.music {
+  padding-bottom: var(--section-pad);
+}
 
 .tagline.headercard {
   font-family: var(--font-display);
@@ -163,14 +167,19 @@ const listSections = ['Main Genres', 'Recent Song', 'Phasing Out', 'Favorites']
   margin-bottom: 0.8rem;
   font-size: 1.6rem;
 }
-.track-body audio { width: 100%; margin-bottom: 0.8rem; }
+.track-body audio {
+  width: 100%;
+  margin-bottom: 0.8rem;
+}
 
 .members {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 1.5rem;
 }
-.member-card { padding: 1.5rem; }
+.member-card {
+  padding: 1.5rem;
+}
 .member-card h2 {
   font-family: var(--font-display);
   color: var(--accent);
@@ -189,14 +198,20 @@ const listSections = ['Main Genres', 'Recent Song', 'Phasing Out', 'Favorites']
   object-fit: cover;
   border-radius: 0.75rem;
 }
-.member-row p { flex: 2 1 200px; font-size: 0.95rem; line-height: 1.6; }
+.member-row p {
+  flex: 2 1 200px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
 
 .listen {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
 }
-.listen-main { flex: 2 1 480px; }
+.listen-main {
+  flex: 2 1 480px;
+}
 .listen-main h1 {
   font-family: var(--font-display);
   font-size: clamp(1.8rem, 4vw, 2.8rem);
@@ -215,7 +230,10 @@ const listSections = ['Main Genres', 'Recent Song', 'Phasing Out', 'Favorites']
   color: var(--accent);
   margin-bottom: 0.5rem;
 }
-.list-card ul { padding-left: 1.2rem; margin: 0; }
+.list-card ul {
+  padding-left: 1.2rem;
+  margin: 0;
+}
 
 .spotify-card {
   flex: 1 1 280px;
@@ -230,8 +248,12 @@ const listSections = ['Main Genres', 'Recent Song', 'Phasing Out', 'Favorites']
   border-radius: 12px;
   border: none;
 }
-.centered { text-align: center; }
-.spotify-link { color: #1db954; }
+.centered {
+  text-align: center;
+}
+.spotify-link {
+  color: #1db954;
+}
 
 .contact-card {
   max-width: 500px;
@@ -244,7 +266,15 @@ const listSections = ['Main Genres', 'Recent Song', 'Phasing Out', 'Favorites']
   color: var(--accent);
   margin-bottom: 0.8rem;
 }
-.contact-card ul { list-style: none; padding: 0; margin: 0; }
-.contact-card li { margin-bottom: 0.4rem; }
-.contact-card a { color: #ff8800; }
+.contact-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.contact-card li {
+  margin-bottom: 0.4rem;
+}
+.contact-card a {
+  color: #ff8800;
+}
 </style>

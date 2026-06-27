@@ -4,7 +4,7 @@ import { onMounted, onUnmounted, ref } from 'vue'
 withDefaults(defineProps<{ flip?: boolean; color?: string; color2?: string }>(), {
   flip: false,
   color: '#c8ff00',
-  color2: '#ff3c00',
+  color2: '#ff3c00'
 })
 
 const path1 = ref('')
@@ -41,5 +41,8 @@ onUnmounted(() => cancelAnimationFrame(animId))
   overflow: hidden;
   line-height: 0;
 }
-svg { display: block; width: 100%; }
+svg {
+  display: block;
+  width: 100%;
+}
 </style>

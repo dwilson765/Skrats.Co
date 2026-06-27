@@ -24,17 +24,25 @@ const showProjectHub = false
       <article class="card">
         <img :src="webImg" alt="Web Project" />
         <h2>Web-Based Projects</h2>
-        <p>Interactive web apps, IoT dashboards, and online tools built with modern frameworks and APIs.</p>
+        <p>
+          Interactive web apps, IoT dashboards, and online tools built with modern frameworks and
+          APIs.
+        </p>
       </article>
       <article class="card">
         <img :src="aiImg" alt="AI/ML Project" />
         <h2>AI / Machine Learning</h2>
-        <p>Projects using neural networks, computer vision, and data science for smart automation and predictions.</p>
+        <p>
+          Projects using neural networks, computer vision, and data science for smart automation and
+          predictions.
+        </p>
       </article>
       <article class="card">
         <img :src="roboticsImg" alt="Robotics Project" />
         <h2>Hardware &amp; Robotics</h2>
-        <p>Physical builds: robots, microcontroller circuits, sensors, and creative hardware hacks.</p>
+        <p>
+          Physical builds: robots, microcontroller circuits, sensors, and creative hardware hacks.
+        </p>
       </article>
     </div>
 
@@ -66,14 +74,17 @@ const showProjectHub = false
     <h2 class="section-title centered">Resources Used</h2>
     <ul class="list-group">
       <li v-for="resource in resources" :key="resource.name" class="list-group-item">
-        <a :href="resource.link" target="_blank" rel="noopener">{{ resource.name }}</a> - {{ resource.description }}
+        <a :href="resource.link" target="_blank" rel="noopener">{{ resource.name }}</a> -
+        {{ resource.description }}
       </li>
     </ul>
   </div>
 </template>
 
 <style scoped>
-.electronics { padding: var(--section-pad) 0; }
+.electronics {
+  padding: var(--section-pad) 0;
+}
 
 .section-title {
   font-family: var(--font-display);
@@ -81,7 +92,9 @@ const showProjectHub = false
   color: var(--accent);
   margin: 2.5rem 0 1.5rem;
 }
-.section-title.centered { text-align: center; }
+.section-title.centered {
+  text-align: center;
+}
 
 .grid {
   display: grid;
@@ -105,7 +118,10 @@ const showProjectHub = false
   font-family: var(--font-display);
   color: var(--accent);
 }
-.credit { font-size: 0.85rem; color: var(--border); }
+.credit {
+  font-size: 0.85rem;
+  color: var(--border);
+}
 
 .video-frame {
   position: relative;
@@ -138,5 +154,7 @@ const showProjectHub = false
   padding: 0.9rem 1.1rem;
   border-radius: 4px;
 }
-.list-group-item a { color: var(--accent); }
+.list-group-item a {
+  color: var(--accent);
+}
 </style>

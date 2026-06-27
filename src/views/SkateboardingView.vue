@@ -1,12 +1,7 @@
 <script setup lang="ts">
 import Carousel from '@/components/Carousel.vue'
 import CollageGrid from '@/components/CollageGrid.vue'
-import {
-  skaters,
-  skateCarouselImages,
-  skateCollageImages,
-  skateVideoClips,
-} from '@/data'
+import { skaters, skateCarouselImages, skateCollageImages, skateVideoClips } from '@/data'
 import type { CarouselItem } from '@/types'
 
 const photoItems: CarouselItem[] = skateCarouselImages.map((src) => ({ type: 'image', src }))
@@ -64,7 +59,9 @@ const videoItems: CarouselItem[] = skateVideoClips.map((src) => ({ type: 'video'
   background-color: #111;
   border: 3px solid var(--border);
   border-radius: 20px;
-  transition: transform 0.3s ease, border-color 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease;
 }
 .tagline.headercard:hover {
   transform: translateY(-5px);
@@ -98,5 +95,7 @@ const videoItems: CarouselItem[] = skateVideoClips.map((src) => ({ type: 'video'
   color: var(--accent);
   margin-bottom: 1.2rem;
 }
-.section-title.centered { text-align: center; }
+.section-title.centered {
+  text-align: center;
+}
 </style>

@@ -81,7 +81,9 @@ const monsterImg = '/images/GOPR1342.JPG'
   background-color: #111;
   border: 3px solid var(--border);
   border-radius: 20px;
-  transition: transform 0.3s ease, border-color 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease;
 }
 .tagline:hover {
   transform: translateY(-5px);

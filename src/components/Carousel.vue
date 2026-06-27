@@ -91,11 +91,20 @@ function goTo(i: number) {
   border-radius: 50%;
   cursor: pointer;
   line-height: 1;
-  transition: border-color 0.2s, background 0.2s;
+  transition:
+    border-color 0.2s,
+    background 0.2s;
 }
-.ctrl:hover { border-color: var(--accent); background: rgba(0, 0, 0, 0.75); }
-.ctrl.prev { left: -1.2rem; }
-.ctrl.next { right: -1.2rem; }
+.ctrl:hover {
+  border-color: var(--accent);
+  background: rgba(0, 0, 0, 0.75);
+}
+.ctrl.prev {
+  left: -1.2rem;
+}
+.ctrl.next {
+  right: -1.2rem;
+}
 
 .dots {
   display: flex;
@@ -111,7 +120,12 @@ function goTo(i: number) {
   background: transparent;
   cursor: pointer;
   padding: 0;
-  transition: background 0.2s, border-color 0.2s;
+  transition:
+    background 0.2s,
+    border-color 0.2s;
 }
-.dot.active { background: var(--accent); border-color: var(--accent); }
+.dot.active {
+  background: var(--accent);
+  border-color: var(--accent);
+}
 </style>

@@ -17,7 +17,7 @@ const year = new Date().getFullYear()
   font-family: var(--font-display);
   font-size: clamp(1rem, 1.8vw, 1.3rem);
   letter-spacing: 2px;
-  color: rgba(232,232,224,0.5);
+  color: rgba(232, 232, 224, 0.5);
   position: relative;
   z-index: 1;
 }

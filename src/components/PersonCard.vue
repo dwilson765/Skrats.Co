@@ -23,9 +23,12 @@ defineProps<{ person: Person }>()
   padding-bottom: clamp(1.5rem, 4vw, 3rem);
   align-items: stretch;
 }
-.person-row.reverse { flex-direction: row-reverse; }
+.person-row.reverse {
+  flex-direction: row-reverse;
+}
 
-.col-img, .col-txt {
+.col-img,
+.col-txt {
   flex: 1 1 min(100%, 340px);
   min-width: 0;
 }
@@ -39,7 +42,9 @@ defineProps<{ person: Person }>()
   display: block;
   transition: border-color 0.3s;
 }
-.col-img img:hover { border-color: var(--accent); }
+.col-img img:hover {
+  border-color: var(--accent);
+}
 
 .card {
   background: var(--mid);
@@ -47,9 +52,14 @@ defineProps<{ person: Person }>()
   border-radius: var(--card-radius);
   padding: clamp(1rem, 3vw, 2rem);
   height: 100%;
-  transition: border-color 0.3s, transform 0.3s;
+  transition:
+    border-color 0.3s,
+    transform 0.3s;
 }
-.card:hover { border-color: var(--accent); transform: translateY(-5px); }
+.card:hover {
+  border-color: var(--accent);
+  transform: translateY(-5px);
+}
 
 h2 {
   font-family: var(--font-display);
@@ -58,5 +68,8 @@ h2 {
   color: var(--accent);
   margin-bottom: 0.8rem;
 }
-p { line-height: 1.75; color: rgba(232,232,224,0.85); }
+p {
+  line-height: 1.75;
+  color: rgba(232, 232, 224, 0.85);
+}
 </style>

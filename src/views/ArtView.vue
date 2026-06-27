@@ -45,7 +45,9 @@ import { artGeneralPieces, artGothicPieces, juelzBio, juelzImg } from '@/data'
   color: var(--accent);
   margin: 2.5rem 0 1.5rem;
 }
-.section-title.centered { text-align: center; }
+.section-title.centered {
+  text-align: center;
+}
 
 .grid {
   display: grid;
@@ -106,5 +108,7 @@ import { artGeneralPieces, artGothicPieces, juelzBio, juelzImg } from '@/data'
   font-family: var(--font-display);
   transition: border-color 0.2s;
 }
-.btn-dark:hover { border-color: var(--accent); }
+.btn-dark:hover {
+  border-color: var(--accent);
+}
 </style>

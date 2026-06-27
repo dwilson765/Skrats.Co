@@ -17,7 +17,7 @@ export function useParticles(canvasRef: ReturnType<typeof ref<HTMLCanvasElement 
       r: Math.random() * 1.2 + 0.3,
       dx: (Math.random() - 0.5) * 0.3,
       dy: (Math.random() - 0.5) * 0.3,
-      color: Math.random() > 0.6 ? '#c8ff00' : '#ff3c00',
+      color: Math.random() > 0.6 ? '#c8ff00' : '#ff3c00'
     }))
   }
 

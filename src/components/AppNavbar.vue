@@ -13,20 +13,36 @@ const dropdownOpen = ref(false)
   <nav class="navbar">
     <RouterLink class="brand" to="/">SkratCorp</RouterLink>
 
-    <button class="burger" :class="{ open: mobileOpen }" @click="mobileOpen = !mobileOpen" aria-label="Toggle menu">
+    <button
+      class="burger"
+      :class="{ open: mobileOpen }"
+      @click="mobileOpen = !mobileOpen"
+      aria-label="Toggle menu"
+    >
       <span /><span /><span />
     </button>
 
     <ul class="nav-list" :class="{ open: mobileOpen }">
-      <li v-for="item in items" :key="item.label" class="nav-item"
-          :class="{ 'has-dropdown': item.children }">
+      <li
+        v-for="item in items"
+        :key="item.label"
+        class="nav-item"
+        :class="{ 'has-dropdown': item.children }"
+      >
         <template v-if="item.children">
           <button class="nav-link dropdown-trigger" @click="dropdownOpen = !dropdownOpen">
             {{ item.label }} <span class="caret">▾</span>
           </button>
           <ul class="dropdown" :class="{ open: dropdownOpen }">
             <li v-for="child in item.children" :key="child.label">
-              <RouterLink class="dropdown-item" :to="child.href" @click="dropdownOpen = false; mobileOpen = false">
+              <RouterLink
+                class="dropdown-item"
+                :to="child.href"
+                @click="
+                  dropdownOpen = false
+                  mobileOpen = false
+                "
+              >
                 {{ child.label }}
               </RouterLink>
             </li>
@@ -63,7 +79,11 @@ const dropdownOpen = ref(false)
   transition: text-shadow 0.3s;
   white-space: nowrap;
 }
-.brand:hover { text-shadow: 0 0 28px var(--accent), 0 0 56px var(--accent); }
+.brand:hover {
+  text-shadow:
+    0 0 28px var(--accent),
+    0 0 56px var(--accent);
+}
 
 .nav-list {
   list-style: none;
@@ -74,7 +94,9 @@ const dropdownOpen = ref(false)
   align-items: center;
 }
 
-.nav-item { position: relative; }
+.nav-item {
+  position: relative;
+}
 
 .nav-link {
   font-family: var(--font-display);
@@ -88,9 +110,15 @@ const dropdownOpen = ref(false)
   padding: 0;
   transition: color 0.2s;
 }
-.nav-link:hover, .nav-link.router-link-active { color: var(--accent); }
+.nav-link:hover,
+.nav-link.router-link-active {
+  color: var(--accent);
+}
 
-.caret { font-size: 0.8em; margin-left: 4px; }
+.caret {
+  font-size: 0.8em;
+  margin-left: 4px;
+}
 
 .dropdown {
   display: none;
@@ -104,7 +132,9 @@ const dropdownOpen = ref(false)
   padding: 0.4rem 0;
   margin: 0;
 }
-.dropdown.open { display: block; }
+.dropdown.open {
+  display: block;
+}
 .dropdown-item {
   display: block;
   padding: 0.5rem 1rem;
@@ -113,9 +143,14 @@ const dropdownOpen = ref(false)
   color: var(--fg);
   text-decoration: none;
   letter-spacing: 1px;
-  transition: background 0.15s, color 0.15s;
+  transition:
+    background 0.15s,
+    color 0.15s;
 }
-.dropdown-item:hover { background: var(--accent); color: #000; }
+.dropdown-item:hover {
+  background: var(--accent);
+  color: #000;
+}
 
 .burger {
   display: none;
@@ -132,14 +167,24 @@ const dropdownOpen = ref(false)
   width: 24px;
   height: 2px;
   background: var(--fg);
-  transition: transform 0.2s, opacity 0.2s;
+  transition:
+    transform 0.2s,
+    opacity 0.2s;
 }
-.burger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-.burger.open span:nth-child(2) { opacity: 0; }
-.burger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+.burger.open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.burger.open span:nth-child(2) {
+  opacity: 0;
+}
+.burger.open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
 
 @media (max-width: 768px) {
-  .burger { display: flex; }
+  .burger {
+    display: flex;
+  }
   .nav-list {
     display: none;
     position: absolute;
@@ -153,7 +198,14 @@ const dropdownOpen = ref(false)
     gap: 1rem;
     align-items: flex-start;
   }
-  .nav-list.open { display: flex; }
-  .dropdown { position: static; border: none; border-left: 2px solid var(--accent); margin-left: 1rem; }
+  .nav-list.open {
+    display: flex;
+  }
+  .dropdown {
+    position: static;
+    border: none;
+    border-left: 2px solid var(--accent);
+    margin-left: 1rem;
+  }
 }
 </style>

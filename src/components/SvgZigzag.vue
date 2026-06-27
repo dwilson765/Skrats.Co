@@ -17,6 +17,13 @@ withDefaults(defineProps<{ color?: string }>(), { color: '#c8ff00' })
 </template>
 
 <style scoped>
-.zz-wrap { width: 100%; overflow: hidden; line-height: 0; }
-svg { display: block; width: 100%; }
+.zz-wrap {
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+svg {
+  display: block;
+  width: 100%;
+}
 </style>

@@ -13,7 +13,7 @@ export function useScrollReveal(selector = '.fade-in') {
           }
         })
       },
-      { threshold: 0.12 },
+      { threshold: 0.12 }
     )
     document.querySelectorAll<HTMLElement>(selector).forEach((el) => observer.observe(el))
   })

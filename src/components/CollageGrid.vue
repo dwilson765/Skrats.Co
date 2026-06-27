@@ -56,10 +56,17 @@ const grid = computed(() => {
   font-family: var(--font-display);
   font-size: 1.1rem;
   border-radius: 4px;
-  transition: border-color 0.2s, color 0.2s;
+  transition:
+    border-color 0.2s,
+    color 0.2s;
 }
-.btn:hover { border-color: var(--accent); }
-.btn.active { border-color: var(--accent); color: var(--accent); }
+.btn:hover {
+  border-color: var(--accent);
+}
+.btn.active {
+  border-color: var(--accent);
+  color: var(--accent);
+}
 
 .row1 {
   display: flex;

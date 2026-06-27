@@ -101,5 +101,7 @@ p {
   position: relative;
   transition: filter 0.4s;
 }
-.art-img:hover { filter: saturate(1.3) contrast(1.05); }
+.art-img:hover {
+  filter: saturate(1.3) contrast(1.05);
+}
 </style>

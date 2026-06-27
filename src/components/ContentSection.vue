@@ -15,10 +15,20 @@ function isInternal(link?: string) {
       <div class="card">
         <p>{{ section.description }}</p>
       </div>
-      <RouterLink v-if="section.img && isInternal(section.link)" :to="section.link!" class="img-card card">
+      <RouterLink
+        v-if="section.img && isInternal(section.link)"
+        :to="section.link!"
+        class="img-card card"
+      >
         <img :src="section.img" :alt="section.title" />
       </RouterLink>
-      <a v-else-if="section.img" :href="section.link" target="_blank" rel="noopener" class="img-card card">
+      <a
+        v-else-if="section.img"
+        :href="section.link"
+        target="_blank"
+        rel="noopener"
+        class="img-card card"
+      >
         <img :src="section.img" :alt="section.title" />
       </a>
     </div>
@@ -44,11 +54,22 @@ function isInternal(link?: string) {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  transition: border-color 0.3s, transform 0.3s;
+  transition:
+    border-color 0.3s,
+    transform 0.3s;
 }
-.card:hover { border-color: var(--accent); transform: translateY(-5px); }
-.img-card { text-decoration: none; }
-.img-card img { width: 100%; height: auto; border-radius: 8px; }
+.card:hover {
+  border-color: var(--accent);
+  transform: translateY(-5px);
+}
+.img-card {
+  text-decoration: none;
+}
+.img-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
 
 .section-title {
   font-family: var(--font-display);
@@ -57,5 +78,8 @@ function isInternal(link?: string) {
   color: var(--accent);
   margin-bottom: 1.2rem;
 }
-p { line-height: 1.75; color: rgba(232,232,224,0.85); }
+p {
+  line-height: 1.75;
+  color: rgba(232, 232, 224, 0.85);
+}
 </style>

@@ -10,11 +10,11 @@ const router = createRouter({
     { path: '/music', component: () => import('@/views/MusicView.vue') },
     { path: '/art', component: () => import('@/views/ArtView.vue') },
     { path: '/art/juelz', component: () => import('@/views/JuelzArtView.vue') },
-    { path: '/electronics', component: () => import('@/views/ElectronicsView.vue') },
+    { path: '/electronics', component: () => import('@/views/ElectronicsView.vue') }
   ],
   scrollBehavior() {
     return { top: 0 }
-  },
+  }
 })
 
 export default router

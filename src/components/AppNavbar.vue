@@ -39,7 +39,7 @@ const dropdownOpen = ref(false)
                 class="dropdown-item"
                 :to="child.href"
                 @click="
-                  dropdownOpen = false
+                  dropdownOpen = false,
                   mobileOpen = false
                 "
               >

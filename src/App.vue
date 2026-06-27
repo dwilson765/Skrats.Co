@@ -2,13 +2,12 @@
 import { RouterView } from 'vue-router'
 import AppNavbar from '@/components/AppNavbar.vue'
 import AppFooter from '@/components/AppFooter.vue'
-import ParticleCanvas from '@/components/ParticleCanvas.vue'
 import { navItems } from '@/data'
 import { useScrollReveal } from '@/composables/useScrollReveal'
-import { useCursor } from '@/composables/useCursor'
+
 
 useScrollReveal()
-useCursor()
+
 </script>
 
 <template>

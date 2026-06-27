@@ -7,7 +7,7 @@ import { people, sections } from '@/data'
 
 // Public-folder asset paths (kept as plain strings so Vite doesn't try to
 // resolve/bundle them as modules — drop your real files into /public)
-const leaderboardImg = '/SkratLeaderboard.png'
+const leaderboardImg = '/images/SkratLeaderboard.png'
 const monsterImg = '/images/GOPR1342.JPG'
 </script>
 
@@ -68,15 +68,15 @@ const monsterImg = '/images/GOPR1342.JPG'
 /* Tagline rendered as a "headercard" — matches the original .headercard style */
 .tagline {
   position: relative;
-  z-index: 2;
+  z-index: 1;
   font-family: var(--font-display);
   font-size: clamp(1.2rem, 3vw, 2rem);
   letter-spacing: clamp(1px, 0.3vw, 3px);
   color: var(--fg);
   text-align: center;
   text-transform: none;
-  max-width: 600px;
-  margin: -3rem auto 0;
+  max-width: auto;
+  margin: -1rem auto 0;
   padding: 1.5rem;
   background-color: #111;
   border: 3px solid var(--border);
@@ -86,7 +86,7 @@ const monsterImg = '/images/GOPR1342.JPG'
     border-color 0.3s ease;
 }
 .tagline:hover {
-  transform: translateY(-5px);
+  
   border-color: var(--accent);
 }
 

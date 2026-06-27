@@ -35,7 +35,7 @@ defineProps<{ person: Person }>()
 
 .col-img img {
   width: 100%;
-  height: clamp(200px, 40vw, 420px);
+  height: auto;
   object-fit: cover;
   border-radius: 16px;
   border: 2px solid var(--border);

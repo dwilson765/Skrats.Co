@@ -71,7 +71,7 @@ const grid = computed(() => {
 .row1 {
   display: flex;
   flex-wrap: wrap;
-  max-height: 700px;
+  max-height: 600px;
   overflow-y: auto;
   padding: 0 4px;
 }

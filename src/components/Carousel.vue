@@ -68,7 +68,7 @@ function goTo(i: number) {
 .carousel-item img,
 .carousel-item video {
   max-width: 100%;
-  width: 100%;
+  width: 75%;
   border: clamp(4px, 1vw, 10px) solid #000;
   border-radius: 10%;
   display: block;
@@ -76,6 +76,7 @@ function goTo(i: number) {
 }
 .carousel-item video {
   border-radius: 8px;
+  width: 50%;
 }
 
 .ctrl {

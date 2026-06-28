@@ -7,12 +7,7 @@ const webImg = '/images/website.gif'
 const aiImg = '/images/nnetwork.gif'
 const roboticsImg = '/images/breadboard.jpg'
 
-// The original electronics.html had a "Project Hub" + "Project Videos"
-// section using `projects`/`videos`, but it was commented out in the
-// source HTML — only the 3 static category cards + Resources list were
-// actually live. I've kept those commented-out sections here too (behind
-// `showProjectHub`) since the data already exists and they're nice to have;
-// flip this to true if you want them live.
+
 const showProjectHub = false
 </script>
 

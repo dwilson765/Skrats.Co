@@ -21,25 +21,31 @@ const videoItems: CarouselItem[] = skateVideoClips.map((src) => ({ type: 'video'
         </div>
       </div>
     </div>
+    <hr class="hr-glow" />
 
-    <section class="container">
-      <h1 class="section-title centered">Recent Clips &amp; Pics</h1>
+
+    <section class="container margin-space">
+      <h1 class="section-title centered">Recent Photos</h1>
       <Carousel :items="photoItems" />
     </section>
 
     <hr class="hr-glow" />
 
+    <section class="container">
     <CollageGrid
       :images="skateCollageImages"
-      heading="All The Clips"
+      heading="All The Pics"
       subheading="Click on the buttons to change the grid view."
     />
+    </section>
 
     <hr class="hr-glow" />
 
     <section class="container">
       <h1 class="section-title centered">Skateboarding Clips</h1>
+      <div class="container">
       <Carousel :items="videoItems" />
+      </div>
     </section>
   </div>
 </template>
@@ -53,7 +59,7 @@ const videoItems: CarouselItem[] = skateVideoClips.map((src) => ({ type: 'video'
   font-size: clamp(1.2rem, 3vw, 2rem);
   color: var(--fg);
   text-align: center;
-  max-width: 400px;
+  max-width: 100%;
   margin: 2rem auto;
   padding: 1.5rem;
   background-color: #111;
@@ -93,9 +99,21 @@ const videoItems: CarouselItem[] = skateVideoClips.map((src) => ({ type: 'video'
   font-family: var(--font-display);
   font-size: clamp(1.6rem, 4vw, 2.4rem);
   color: var(--accent);
-  margin-bottom: 1.2rem;
+  padding: 1.5rem;
 }
+
 .section-title.centered {
   text-align: center;
 }
+
+.margin-space{
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+.margin-side{
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
 </style>

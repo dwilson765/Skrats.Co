@@ -43,11 +43,7 @@ export const people: Person[] = [
   }
 ]
 
-// Ported 1:1 from the original app.js `sections` array.
-// NOTE: only "Skateboarding" had a `link` in the original data. Since this
-// is now an SPA with real routes for all four ("/music", "/art",
-// "/electronics" already exist as views), I've added internal links for
-// all of them so every card is clickable — easy to remove if you'd rather
+
 // only Skateboarding link out.
 export const sections: ContentSection[] = [
   {
@@ -82,7 +78,7 @@ export const sections: ContentSection[] = [
   }
 ]
 
-// Ported 1:1 from app.js — used on the Electronics page.
+
 export const projects: Project[] = [
   {
     img: '/images/web_project.jpg',
@@ -136,8 +132,7 @@ export const resources: Resource[] = [
 ]
 
 // ───────────────────────── Skateboarding ─────────────────────────
-// Ported from skate_app.js (the more complete version — jart.js had an
-// unfinished "Yap." placeholder for Jon's setup, this one has the real specs).
+
 export const skaters: Skater[] = [
   {
     id: 'frankye',
@@ -210,8 +205,7 @@ export const skateCollageImages: string[] = [
 // Skateboarding Clips video carousel (Skateboarding.html)
 export const skateVideoClips: string[] = ['/vids/clean_run.mp4', '/vids/clean_run2.mp4']
 
-// Juelz's collage grid was empty in the original jart.js — add real image
-// paths here once you have them.
+
 export const juelzCollageImages: string[] = []
 
 // ───────────────────────────── Art ─────────────────────────────
@@ -272,7 +266,7 @@ export const musicTracks: MusicTrack[] = [
 ]
 
 // Band member cards (music.html) — original text was the same lorem-ipsum
-// placeholder repeated for every member; ported verbatim.
+
 export const bandMembers: BandMember[] = [
   {
     name: 'Gabriel',
@@ -305,7 +299,7 @@ export const bandMembers: BandMember[] = [
 ]
 
 // "Take a Listen" genre/recent/phasing-out/favorites lists were left as
-// unfilled "bleh" placeholders in the original — ported as-is.
+
 export const musicListPlaceholders = ['bleh', 'bleh', 'bleh']
 
 export const spotifyEmbedUrl =
